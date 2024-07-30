@@ -6,11 +6,13 @@ import { CatnavigationComponent } from './components/catnavigation/catnavigation
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidenavigationComponent } from './components/sidenavigation/sidenavigation.component';
 
-
-
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, CatnavigationComponent, SidenavigationComponent],
-  imports: [CommonModule,
-    FontAwesomeModule],
+  declarations: [
+    HomeComponent,
+    HeaderComponent,
+    CatnavigationComponent,
+    SidenavigationComponent,
+  ],
+  imports: [CommonModule, FontAwesomeModule],
 })
 export class HomeModule {}
