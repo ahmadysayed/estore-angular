@@ -6,6 +6,7 @@ import { CatnavigationComponent } from './components/catnavigation/catnavigation
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidenavigationComponent } from './components/sidenavigation/sidenavigation.component';
 import { ProductsComponent } from './components/products/products.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,6 @@ import { ProductsComponent } from './components/products/products.component';
     SidenavigationComponent,
     ProductsComponent,
   ],
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, SharedModule],
 })
 export class HomeModule {}
