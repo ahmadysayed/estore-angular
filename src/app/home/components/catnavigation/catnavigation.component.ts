@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CategoriesStoreItem } from '../../services/categoris.storeItem';
+import { CategoriesStoreItem } from '../../services/category/categoris.storeItem';
 
 @Component({
   selector: 'app-catnavigation',
