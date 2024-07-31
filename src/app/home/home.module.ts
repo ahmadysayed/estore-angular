@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidenavigationComponent } from './components/sidenavigation/sidenavigation.component';
 import { ProductsComponent } from './components/products/products.component';
 import { SharedModule } from '../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,6 @@ import { SharedModule } from '../shared/shared.module';
     SidenavigationComponent,
     ProductsComponent,
   ],
-  imports: [CommonModule, FontAwesomeModule, SharedModule],
+  imports: [CommonModule, FontAwesomeModule, SharedModule, HttpClientModule],
 })
 export class HomeModule {}
