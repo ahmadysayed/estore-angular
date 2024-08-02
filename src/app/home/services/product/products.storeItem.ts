@@ -10,8 +10,8 @@ export class ProductsStoreItem extends StoreItem<Product[]> {
     super([]);
   }
 
-  async loadProduct() {
-    this.productService.getAllProducts().subscribe((products) => {
+  async loadProduct(query?: string) {
+    this.productService.getAllProducts(query).subscribe((products) => {
       this.setValue(products);
     });
   }
