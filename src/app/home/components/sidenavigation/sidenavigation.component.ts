@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnDestroy, Output } from '@angular/core';
 import { Category } from '../../types/category.type';
-import { CategoriesStoreItem } from '../../services/category/categoris.storeItem';
+import { CategoriesStoreItem } from '../../services/category/categories.storeItem';
 import { Subscription } from 'rxjs';
 
 @Component({

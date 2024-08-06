@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CategoriesStoreItem } from './services/category/categoris.storeItem';
+import { CategoriesStoreItem } from './services/category/categories.storeItem';
 import { ProductsStoreItem } from './services/product/products.storeItem';
 import { SearchKeyword } from './types/searchKeyword.type';
 
@@ -14,18 +14,18 @@ export class HomeComponent {
     private productsStoreItem: ProductsStoreItem
   ) {
     this.categoriesStoreItem.loadCategories();
-    this.productsStoreItem.loadProduct();
+    this.productsStoreItem.loadProducts();
   }
 
   onSelectCategory(categoryId: number): void {
-    this.productsStoreItem.loadProduct('maincategoryid=' + categoryId);
+    this.productsStoreItem.loadProducts('maincategoryid=' + categoryId);
   }
 
   onSearchKeyword(searchKeyword: SearchKeyword): void {
-    this.productsStoreItem.loadProduct(
+    this.productsStoreItem.loadProducts(
       'maincategoryid=' +
         searchKeyword.categoryId +
-        '&keywords=' +
+        '&keyword=' +
         searchKeyword.keyword
     );
   }

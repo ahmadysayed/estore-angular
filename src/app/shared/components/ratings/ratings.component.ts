@@ -4,7 +4,7 @@ import {
   faStar,
   faStarHalfStroke,
 } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faStarEmpty } from '@fortawesome/free-solid-svg-icons';
+import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-ratings',
@@ -17,21 +17,17 @@ export class RatingsComponent {
   faStarEmpty = faStarEmpty;
 
   stars: IconDefinition[] = [];
-
   private _score: number = 0;
 
   @Input()
   set score(val: number) {
     this._score = val > 5 ? 5 : val;
-    const solidStartCount: number = Math.floor(this._score);
-    for (let i: number = 0; i < solidStartCount; i++) {
+    const solidStarCount: number = Math.floor(this._score);
+    for (let i: number = 0; i < solidStarCount; i++) {
       this.stars.push(faStar);
     }
 
-    if (
-      this._score - solidStartCount > 0 &&
-      this._score - solidStartCount < 1
-    ) {
+    if (this._score - solidStarCount > 0 && this._score - solidStarCount < 1) {
       this.stars.push(faStarHalfStroke);
     }
 

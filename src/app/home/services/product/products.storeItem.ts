@@ -6,12 +6,12 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ProductsStoreItem extends StoreItem<Product[]> {
-  constructor(private productService: ProductsService) {
+  constructor(private productsService: ProductsService) {
     super([]);
   }
 
-  async loadProduct(query?: string) {
-    this.productService.getAllProducts(query).subscribe((products) => {
+  async loadProducts(query?: string) {
+    this.productsService.getAllProducts(query).subscribe((products) => {
       this.setValue(products);
     });
   }

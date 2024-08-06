@@ -8,7 +8,8 @@ import { ProductsStoreItem } from '../../services/product/products.storeItem';
 })
 export class ProductsGalleryComponent {
   constructor(private productsStoreItem: ProductsStoreItem) {}
+
   onSelectSubCategory(subCategoryId: number): void {
-    this.productsStoreItem.loadProduct('subcategoryid=' + subCategoryId);
+    this.productsStoreItem.loadProducts('subcategoryid=' + subCategoryId);
   }
 }

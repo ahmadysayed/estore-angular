@@ -9,12 +9,15 @@ import { ProductsComponent } from './components/products/products.component';
 import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryService } from './services/category/category.service';
-import { CategoriesStoreItem } from './services/category/categoris.storeItem';
-import { ProductsStoreItem } from './services/product/products.storeItem';
+import { CategoriesStoreItem } from './services/category/categories.storeItem';
 import { ProductsService } from './services/product/products.service';
+import { ProductsStoreItem } from './services/product/products.storeItem';
+import { HomeRoutingModule } from './home-routing.module';
 import { RouterModule } from '@angular/router';
-import { HomeRouteModule } from './home-routing.module';
 import { ProductsGalleryComponent } from './components/products-gallery/products-gallery.component';
+import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
+import { CartStoreItem } from './services/cart/cart.storeItem';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { ProductsGalleryComponent } from './components/products-gallery/products
     SidenavigationComponent,
     ProductsComponent,
     ProductsGalleryComponent,
+    ProductdetailsComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,
@@ -31,13 +36,14 @@ import { ProductsGalleryComponent } from './components/products-gallery/products
     SharedModule,
     HttpClientModule,
     RouterModule,
-    HomeRouteModule,
+    HomeRoutingModule,
   ],
   providers: [
     CategoryService,
     CategoriesStoreItem,
-    ProductsStoreItem,
     ProductsService,
+    ProductsStoreItem,
+    CartStoreItem
   ],
 })
 export class HomeModule {}
